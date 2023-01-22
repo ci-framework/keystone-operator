@@ -9,7 +9,7 @@ on:
 jobs:
   e2e:
     if: contains(github.event.pull_request.labels.*.name, 'ok-to-test')
-    uses: openstack-k8s-operators/openstack-k8s-operators-ci/.github/workflows/reusable-workflow-e2e.yaml@master
+    uses: tripleo-ci/openstack-k8s-operators-ci/.github/workflows/reusable-workflow-e2e.yaml@run_kuttl_tests
     with:
       operator_name: keystone-operator
     secrets: inherit
